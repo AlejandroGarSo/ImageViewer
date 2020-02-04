@@ -4,5 +4,5 @@ import imageviewer.model.Image;
 
 public interface ImageDisplay {
     Image current();
-    void show(Image image);
+    void show(Image image,int width, int height);
 }

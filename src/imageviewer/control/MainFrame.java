@@ -17,7 +17,7 @@ public class MainFrame extends JFrame{
     public MainFrame() {
         this.setTitle("Image Viewer");
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setSize(1366, 768);
+        this.setSize(800, 600);
         this.setLocationRelativeTo(null);
         this.getContentPane().add(imageDisplay());
         this.getContentPane().add(toolbar(), BorderLayout.SOUTH);
@@ -41,7 +41,7 @@ public class MainFrame extends JFrame{
         return new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                imageDisplay.show(imageDisplay.current().prev());
+                imageDisplay.show(imageDisplay.current().prev(),getWidth(),getHeight());
             }
         };
     }
@@ -56,7 +56,7 @@ public class MainFrame extends JFrame{
         return new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                imageDisplay.show(imageDisplay.current().next());
+                imageDisplay.show(imageDisplay.current().next(),getWidth(),getHeight()); 
             }
         };
     }
