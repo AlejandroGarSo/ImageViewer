@@ -15,8 +15,7 @@ public class FileImageLoader implements ImageLoader{
             
             @Override
             public boolean accept(File pathname) {
-                //return pathname.getName().endsWith(".JPEG");
-                return true;
+                return pathname.getName().endsWith(".jpg");
             }
         };
     }
